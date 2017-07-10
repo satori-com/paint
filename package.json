@@ -1,8 +1,17 @@
 {
-  "name": "mz-paint",
+  "name": "satori-paint",
+  "description": "Satori demo app showcasing a collaborative whiteboard. https://motion.satori.com",
+  "keywords": [
+    "Satori",
+    "demo",
+    "paint",
+    "whiteboard",
+    "pubsub"
+  ],
   "version": "0.1.0",
   "homepage": "http://paint.satori.com",
-  "private": true,
+  "author": "Satori Worldwide, Inc.",
+  "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "canvas-prebuilt": "^1.6.5-prerelease.1",
     "enzyme": "^2.8.2",
