@@ -2,7 +2,7 @@ import AvatarPanel from './components/AvatarPicker';
 import Controls from './components/Controls';
 import jsCookie from 'js-cookie';
 import React, { PureComponent } from 'react';
-import SatoriLogo from './resources/SatoriLogo.svg';
+import SatoriLogo from './resources/SatoriLogoWithText.svg';
 import uuid from 'uuid';
 import Whiteboard from './components/Whiteboard';
 import { publish, onConnect, isConnected } from './lib/rtm';
