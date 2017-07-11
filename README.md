@@ -109,6 +109,6 @@ The [Satori Motion Demo](https://github.com/satori-com/motion) and [Satori Chat 
 This demo shows you a simple app that shares a whiteboard among users. Try extending this application to include more complex drawing tools or more colors. You may embed this app in your other projects or the other demo projects we provide. 
 
 # Further reading
-* [Satori Developer Documentation](https://wwwstage.satori.com/docs/introduction/new-to-satori): Documentation for the entire Satori Live Data Ecosystem 
+* [Satori Developer Documentation](https://www.satori.com/docs/introduction/new-to-satori): Documentation for the entire Satori Live Data Ecosystem 
 * [Satori JavaScript SDK](https://github.com/satori-com/satori-rtm-sdk-js): The Satori JavaScript API and developer tools
-* [Satori JavaScript tutorial](https://wwwstage.satori.com/docs/tutorials/javascript-tutorial)):  Tutorial that shows you how to write JavaScript apps that use the SDK and the [Satori Live Messaging](https://wwwstage.satori.com/docs/using-satori/rtm-api) platform 
+* [Satori JavaScript tutorial](https://www.satori.com/docs/tutorials/javascript-tutorial)):  Tutorial that shows you how to write JavaScript apps that use the SDK and the [Satori Live Messaging](https://www.satori.com/docs/using-satori/rtm-api) platform 
