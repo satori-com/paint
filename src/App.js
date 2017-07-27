@@ -2,7 +2,7 @@ import AvatarPanel from './components/AvatarPicker';
 import Controls from './components/Controls';
 import jsCookie from 'js-cookie';
 import React, { PureComponent } from 'react';
-import SatoriLogo from './resources/SatoriLogoWithText.svg';
+import { AppShell, AppHeader } from '@satori-sdk/component-library';
 import uuid from 'uuid';
 import Whiteboard from './components/Whiteboard';
 import { publish, onConnect, isConnected } from './lib/rtm';
@@ -169,57 +169,43 @@ class App extends PureComponent {
 
   render() {
     return (
-      <div className="App-overlay">
-        <div className="App">
-          <div className="App-header">
-            <img src={SatoriLogo} alt="" />
-            <div className="App-links">
-              <button
-                className="participants-dropdown-trigger"
-                onClick={this.handleShowParticipantList}
-              >
-                <div
-                  className={`chevron ${this.state.showParticipantList ? 'dropdown-active' : ''}`} />
-              </button>
-            </div>
-          </div>
-          <div id="App-main">
-            <div className="App-content">
-              <Controls
-                color={this.state.color}
-                dropdownVisible={false}
-                stroke={this.state.stroke}
-                handleDropDown={this.handleDropDown}
-                handleResetCanvas={this.handleResetCanvas}
-                handleSetColor={this.handleSetColor}
-                handleSetEraser={this.handleSetEraser}
-                handleSetStroke={this.handleSetStroke}
-                showDropDown={this.state.dropdownVisible}
-                handleShowMessage={this.handleMessageWindow}
-              />
-              <AvatarPanel
-                show={this.state.showAvatarPicker}
-                onSubmit={this.handleSetUser}
-              />
+      <AppShell>
+        <AppHeader projectUrl="https://github.com/satori-com/paint">
+          <button className="participants-dropdown-trigger"
+                  onClick={this.handleShowParticipantList}>
+            <div className={`chevron ${this.state.showParticipantList ? 'dropdown-active' : ''}`} />
+          </button>
+        </AppHeader>
+        <main id="App-main">
+          <div className="App-content">
+            <Controls color={this.state.color}
+                      dropdownVisible={false}
+                      stroke={this.state.stroke}
+                      handleDropDown={this.handleDropDown}
+                      handleResetCanvas={this.handleResetCanvas}
+                      handleSetColor={this.handleSetColor}
+                      handleSetEraser={this.handleSetEraser}
+                      handleSetStroke={this.handleSetStroke}
+                      showDropDown={this.state.dropdownVisible}
+                      handleShowMessage={this.handleMessageWindow}/>
+            <AvatarPanel show={this.state.showAvatarPicker}
+                         onSubmit={this.handleSetUser}/>
 
-              <Whiteboard
-                color={this.state.color}
-                showMessage={this.state.showMessage}
-                eraserColor={ERASER_COLOR}
-                drawing={this.state.buttonPressed}
-                height={400}
-                id={this.props.match.params.id}
-                showParticipantList={this.state.showParticipantList}
-                onMouseDown={this.handleMouseDown.bind(this)}
-                onMouseMove={this.handleMouseMove.bind(this)}
-                onMouseUp={this.handleMouseUp.bind(this)}
-                onTouchMove={this.handleMouseMove.bind(this)}
-                onTouchStart={this.handleMouseDown.bind(this)}
-              />
-            </div>
+            <Whiteboard color={this.state.color}
+                        showMessage={this.state.showMessage}
+                        eraserColor={ERASER_COLOR}
+                        drawing={this.state.buttonPressed}
+                        height={400}
+                        id={this.props.match.params.id}
+                        showParticipantList={this.state.showParticipantList}
+                        onMouseDown={this.handleMouseDown.bind(this)}
+                        onMouseMove={this.handleMouseMove.bind(this)}
+                        onMouseUp={this.handleMouseUp.bind(this)}
+                        onTouchMove={this.handleMouseMove.bind(this)}
+                        onTouchStart={this.handleMouseDown.bind(this)}/>
           </div>
-        </div>
-      </div>
+        </main>
+      </AppShell>
     );
   }
 }

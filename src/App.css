@@ -1,23 +1,9 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background: radial-gradient(circle at 51% 39%, #8d9eab, #22272b) fixed;
-    height: 100%;
-}
-
 .shareWidget-text,
 .sub-heading {
     font-size: 14px;
     color: #555;
     font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
-}
-
-.App-overlay {
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 100vh;
-    overflow: auto;
 }
 
 #App-main {
@@ -27,21 +13,7 @@ body {
     margin: 0 auto;
     max-width: 945px;
     position: relative;
-}
-
-.App-header {
-    align-items: center;
-    background: #000000;
-    display: flex;
-    height: 60px;
-    padding-left: 20px;
-    position: relative;
-    z-index: 12;
-}
-
-.App-links {
-    margin-left: auto;
-    padding: 0 10px;
+    width: 100%;
 }
 
 .App-controls {
@@ -97,6 +69,7 @@ body {
     left: 0;
     margin: auto;
     position: absolute;
+    pointer-events: none;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
